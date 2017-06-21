@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBear.Web", "MiBear.Web\MiBear.Web.csproj", "{B9002001-B77E-4DE7-9FDD-A9E61E69161D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBear.BLL", "MiBear.BLL\MiBear.BLL.csproj", "{F277232F-BE1A-4BC2-9666-3B6A775FD700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBear.DAL", "MiBear.DAL\MiBear.DAL.csproj", "{4D3F2B91-CD0C-4054-B409-6415ECA88FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBear.Models", "MiBear.Models\MiBear.Models.csproj", "{DE54FC77-8C58-4704-AC77-E7E6BF5CDDFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBear.Common", "MiBear.Common\MiBear.Common.csproj", "{81A85ED5-1F89-4C87-AB8A-23D7E74E76E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBear.DBUtility", "MiBear.DBUtility\MiBear.DBUtility.csproj", "{02892707-6D13-43CA-A296-864EF8EDFC51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBear.Enum", "MiBear.Enum\MiBear.Enum.csproj", "{A8F79827-B3F6-48AD-B8C6-8F1C08754012}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9002001-B77E-4DE7-9FDD-A9E61E69161D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9002001-B77E-4DE7-9FDD-A9E61E69161D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9002001-B77E-4DE7-9FDD-A9E61E69161D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9002001-B77E-4DE7-9FDD-A9E61E69161D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F277232F-BE1A-4BC2-9666-3B6A775FD700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F277232F-BE1A-4BC2-9666-3B6A775FD700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F277232F-BE1A-4BC2-9666-3B6A775FD700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F277232F-BE1A-4BC2-9666-3B6A775FD700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D3F2B91-CD0C-4054-B409-6415ECA88FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3F2B91-CD0C-4054-B409-6415ECA88FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3F2B91-CD0C-4054-B409-6415ECA88FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3F2B91-CD0C-4054-B409-6415ECA88FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE54FC77-8C58-4704-AC77-E7E6BF5CDDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE54FC77-8C58-4704-AC77-E7E6BF5CDDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE54FC77-8C58-4704-AC77-E7E6BF5CDDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE54FC77-8C58-4704-AC77-E7E6BF5CDDFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A85ED5-1F89-4C87-AB8A-23D7E74E76E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A85ED5-1F89-4C87-AB8A-23D7E74E76E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A85ED5-1F89-4C87-AB8A-23D7E74E76E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A85ED5-1F89-4C87-AB8A-23D7E74E76E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02892707-6D13-43CA-A296-864EF8EDFC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02892707-6D13-43CA-A296-864EF8EDFC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02892707-6D13-43CA-A296-864EF8EDFC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02892707-6D13-43CA-A296-864EF8EDFC51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F79827-B3F6-48AD-B8C6-8F1C08754012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F79827-B3F6-48AD-B8C6-8F1C08754012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F79827-B3F6-48AD-B8C6-8F1C08754012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F79827-B3F6-48AD-B8C6-8F1C08754012}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
