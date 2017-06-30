@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CommonDAL.cs" />
     <Compile Include="LoginDAL.cs" />
+    <Compile Include="MenuDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

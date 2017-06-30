@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CommonBLL.cs" />
     <Compile Include="LoginBLL.cs" />
+    <Compile Include="MenuBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
