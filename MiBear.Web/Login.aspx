@@ -1,36 +1,50 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="MiBear.Web.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="MiBear.Web.Login2" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metronic | Login Page</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
 
-    <title>MiBear登录</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <link rel="shortcut icon" href="media/image/favicon.ico" />
 
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/bootbox.min.js" type="text/javascript"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="media/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="media/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="media/css/style-metro.css" rel="stylesheet" type="text/css" />
+    <link href="media/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="media/css/default.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="media/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="media/css/login.css" rel="stylesheet" type="text/css" />
+
+    <script src="media/JScript/jquery-3.2.1.min.js"></script>
+    <script src="media/JScript/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="media/JScript/bootbox.min.js"></script>
 
     <script type="text/javascript">
         function Login() {
             var loginName = $('#txtLoginName').val();
-            var loginPwd = $('#txtLoginPwd').val();
+            var loginPwd = $('#txtPassword').val();
 
             $.ajax({
-                type: 'post', cache: false, dataType: 'json',
+                type: 'post', async: false, cache: false, dataType: 'json',
                 url: 'Service/Login.ashx',
                 data: { 'action': 'UserLogin', 'loginName': loginName, 'loginPwd': loginPwd },
                 success: function (data) {
                     if (data.success) {
                         window.location.href = 'Index.aspx';
                     } else {
-                        bootbox.alert(data.msg);
+                        bootbox.alert({
+                            message: data.msg,
+                            buttons: {
+                                ok: {
+                                    label: '确定',
+                                    className: 'btn btn-danger'
+                                }
+                            }
+                        });
                     }
                 }
             });
@@ -44,28 +58,60 @@
             }
         }
     </script>
-</head>
-<body class="gray-bg">
-    <div class="middle-box text-center loginscreen  animated fadeInDown">
-        <div>
-            <div>
-                <h1 class="logo-name"></h1>
-            </div>
-            <h3>欢迎使用 MiBear</h3>
 
-            <form class="m-t" role="form" action="index.html">
-                <div class="form-group">
-                    <input id="txtLoginName" type="text" class="form-control" placeholder="用户名" />
-                </div>
-                <div class="form-group">
-                    <input id="txtLoginPwd" type="password" class="form-control" placeholder="密码" />
-                </div>
-                <button id="btnLogin" type="button" class="btn btn-primary block full-width m-b" onclick="Login()">登 录</button>
-                <p class="text-muted text-center">
-                    <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html"><small>注册一个新账号</small></a>
-                </p>
-            </form>
-        </div>
+
+</head>
+<body class="login">
+    <!-- BEGIN LOGO -->
+    <div class="logo">
+        <img src="media/image/logo-big.png" alt="" />
     </div>
+    <!-- END LOGO -->
+    <!-- BEGIN LOGIN -->
+    <div class="content">
+        <!-- BEGIN LOGIN FORM -->
+        <form class="login-form">
+            <h3 class="form-title">Login to your account</h3>
+            <div class="alert alert-error hide">
+                <button class="close" data-dismiss="alert"></button>
+                <span>Enter any username and password.</span>
+            </div>
+            <div class="control-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <div class="controls">
+                    <div class="input-icon left">
+                        <i class="fa fa-user"></i>
+                        <input class="m-wrap" type="text" id="txtLoginName" name="txtLoginName" placeholder="Username" />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <div class="controls">
+                    <div class="input-icon left">
+                        <i class="fa fa-lock"></i>
+                        <input class="m-wrap" type="password" id="txtPassword" name="txtPassword" placeholder="Password" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="checkbox">
+                    &nbsp;<input type="checkbox" name="remember" value="1" />
+                    Remember me
+                </label>
+                <button type="button" class="btn green pull-right" onclick="Login()">
+                    Login <i class="m-icon-swapright m-icon-white"></i>
+                </button>
+            </div>
+        </form>
+        <!-- END LOGIN FORM -->
+    </div>
+    <!-- END LOGIN -->
+    <!-- BEGIN COPYRIGHT -->
+    <div class="copyright">
+        2013 &copy; Metronic. Admin Dashboard Template.
+    </div>
+    <!-- END COPYRIGHT -->
 </body>
-</html>

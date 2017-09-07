@@ -10,6 +10,6 @@
 namespace MiBear.Web {
     
     
-    public partial class Login {
+    public partial class Login2 {
     }
 }
